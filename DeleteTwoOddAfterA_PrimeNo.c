@@ -1,4 +1,4 @@
-#include < stdio.h >
+#include <stdio.h>
 
     int isPrime(int n)
 {
@@ -19,11 +19,11 @@
 int main() {
     int n, a[50];
     printf("Enter the size of array : ");
-    scanf("%d",& n);
+    scanf("%d",&n);
     for (int i = 0; i < n; i++)
     {
         printf("Enter the %dth element : ", i + 1);
-        scanf("%d",& a[i]);
+        scanf("%d",&a[i]);
     }
     printf("Array is: ");
     for (int i = 0; i < n ; i++)
