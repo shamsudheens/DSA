@@ -13,5 +13,5 @@ var climbStairs = function(n) {
     return prev2;
 };
 
-let n = 6;
+let n = 5;
 console.log(climbStairs(n));
