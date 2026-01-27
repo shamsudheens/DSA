@@ -1,0 +1,25 @@
+const subArrayWithGivenSum = (arr, target) => {
+  let left = 0;
+  let sum = 0;
+
+  for (let right = 0; right < arr.length; right++) {
+    sum += arr[right];
+
+    while (sum > target && left <= right) {
+      sum -= arr[left];
+      left++;
+    }
+
+    if (sum === target) {
+      return [left, right]; 
+    }
+  }
+
+  return -1; 
+};
+
+
+const arr = [1, 4, 20, 3, 10, 5];
+const target = 33;
+
+console.log(subArrayWithGivenSum(arr, target));
