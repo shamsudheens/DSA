@@ -8,7 +8,7 @@ const mergeInterval = (arr)=>{
         let current = arr[i];
         
         if(current[0] <= last[1])
-        {
+        {   
             last[1] = Math.max(current[1],last[1]);
         }
         else
