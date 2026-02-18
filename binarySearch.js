@@ -1,18 +1,22 @@
-const binarySearch = (nums,find) =>{
-        let low = 0;
-        let high = nums.length -1;
-        
-        while(low<=high)
-        {
-            let middle = Math.floor((low + high) / 2);
-            let value = nums[middle];
-            console.log("middle:",value)
+const binarySearch = (nums,find) => {
+    let start = 0;
+    let end = nums.length-1;
 
-            if(value<find) low = middle+1;
-            else if(value>find) high = middle-1;
-            else return middle;
+    while(start<=end){
+        let middle = Math.floor((start+end)/2);
+        if(find > nums[middle])
+        {
+            start = middle+1;
         }
-    return -1;
+        else if(find<nums[middle])
+        {
+            end = middle-1;
+        }
+        else
+        {
+            return middle;
+        }
+    }
 }
 let nums = [1,2,3,4,5,6,7,8,9,10,11];
 let find = 1;

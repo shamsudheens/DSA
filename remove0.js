@@ -1,7 +1,8 @@
 const remove0 = (arr)=>{
-    return arr.filter((e)=>{
+    const removedArr = arr.filter((e) =>{
         return e!==0;
     })
+    return removedArr
 }
 
 const arr = [1,2,0,3,4,0,7,6,0]
